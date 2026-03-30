@@ -22,7 +22,7 @@ func handleClient(clientConn net.Conn, targetAddr string) {
 func main() {
     listenAddr := ":" + os.Getenv("PORT")
     targetPort := os.Getenv("V2RAY_SERVER_PORT")
-    if targetPort == ""{
+    if targetPort == "" {
         targetPort == ":80"
         }
     targetAddr := os.Getenv("V2RAY_SERVER_IP") + targetPort
