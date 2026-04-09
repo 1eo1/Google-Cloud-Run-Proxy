@@ -23,7 +23,7 @@ func main() {
     listenAddr := ":" + os.Getenv("PORT")
     targetPort := os.Getenv("V2RAY_SERVER_PORT")
     if targetPort == "" {
-        targetPort == "80"
+        targetPort := "80"
         }
     targetAddr := os.Getenv("V2RAY_SERVER_IP") + ":" + targetPort
     listener, _ := net.Listen("tcp", listenAddr)
